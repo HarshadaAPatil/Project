@@ -1,0 +1,726 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+  --yellow: #f9d806;
+  --light-yellow: #ffee80;
+  --black: #130f40;
+  --light-colour: #666;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 4.5rem;
+  color: var(--black);
+}
+.heading span {
+  position: relative;
+  z-index: 0;
+}
+.heading span::before {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--yellow);
+  clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+}
+.btn1 {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background: var(--light-yellow);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+  text-decoration: none;
+}
+
+.btn1:hover {
+  background: var(--yellow);
+}
+/* navbar css */
+.header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 999;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 9%;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.header .logo span {
+  color: var(--yellow);
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.header .navbar a:hover {
+  color: var(--yellow);
+}
+
+.header .btn1 {
+  margin-top: 0%;
+}
+
+.header #login-btn1 i {
+  font-size: 2.5rem;
+  color: var(--light-colour);
+  cursor: pointer;
+  display: none;
+}
+
+#menu-btn1 {
+  font-size: 2.5rem;
+  color: var(--light-colour);
+  cursor: pointer;
+  display: none;
+}
+
+/* body{
+  height: 300rem;
+
+} */
+
+.header.active {
+  box-shadow: var(--box-shadow);
+  padding: 2rem 9%;
+}
+
+/* navbar css end  */
+.login-form-container {
+  position: fixed;
+  top: -105%;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.login-form-container.active {
+  top: 0;
+  opacity: 1;
+}
+
+.login-form-container form {
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  background: #fff;
+  border: var(--border);
+  text-align: center;
+  width: 40rem;
+}
+
+.login-form-container form .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-form-container form .btn1 {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.login-form-container form h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.login-form-container form .box {
+  margin: 0.7rem 0;
+  width: 100%;
+  text-transform: none;
+  color: var(--black);
+  font-size: 1.6rem;
+  padding: 1rem 1.2rem;
+  border: var(--border);
+}
+
+.login-form-container form p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: var(--light-colour);
+}
+
+.login-form-container form p a {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+.login-form-container #close-login-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 5rem;
+  color: var(--black);
+  cursor: pointer;
+  padding: 2.5rem 9.5%;
+}
+/* component level css start */
+.home {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+.serv {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.featured {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+.vid {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+.featured {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+.vehicles {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+.AdminDashboard {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+.UserDashboard {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+/* component level css end */
+
+/* home css start */
+.home h1 {
+  font-size: 7.5vw;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.home img {
+  width: 100%;
+  margin: 1rem 0;
+}
+/* home css end */
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+
+  .header.active {
+    padding: 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header #login-btn1 i {
+    display: block;
+  }
+
+  #menu-btn1 {
+    display: block;
+  }
+
+  #menu-btn1.fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header #login-btn1 .btn1 {
+    display: none;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* Icons Container*/
+.icons-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  background: #eee;
+  justify-content: center;
+}
+
+.icons-container .icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+}
+
+.icons-container .icons i {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background: #eee;
+  color: var(--black);
+  text-align: center;
+}
+
+.icons-container .icons .content h3 {
+  color: var(--yellow);
+  font-size: 2.5rem;
+}
+
+.icons-container .icons .content p {
+  color: var(--yellow);
+  font-size: 1.5rem;
+}
+
+.icons-container .icons:hover {
+  background: var(--black);
+}
+
+.icons-container .icons:hover i {
+  background: var(--yellow);
+}
+
+.icons-container .icons:hover .content h3 {
+  color: #fff;
+}
+
+.icons-container .icons:hover .content p {
+  color: #eee;
+}
+
+/* Services Section Start */
+.services .boxContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.services .boxContainer .box {
+  box-shadow: var(--box_shadow);
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+.services .boxContainer .box:hover {
+  /* background: #e2ddba; */
+  /* color:var(--black); */
+  background: var(--black) !important;
+}
+.services .boxContainer .box i {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  line-height: 6rem;
+  background: var(--main);
+  color: #000;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.services .boxContainer .box h3 {
+  font-size: 2.2rem;
+}
+.services .boxContainer .box p {
+  line-height: 1.8;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+}
+.services .boxContainer .box:hover h3 {
+  color: #fff;
+}
+.services .boxContainer .box:hover p {
+  color: #fff;
+}
+.services .boxContainer .box:hover i {
+  color: #fff;
+}
+.heading {
+  padding-bottom: 2rem;
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+/* vid component css */
+.video-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 28.125%; /* Maintain a 16:9 aspect ratio (9 divided by 16 equals 0.5625 or 56.25%) */
+  flex: 1;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+.video-wrapper:last-child {
+  margin-right: 0;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adjust the object-fit property as needed */
+}
+.vid3 {
+  margin-top: 10px;
+}
+.vid3-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.vid3-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* Maintain a 16:9 aspect ratio (9 divided by 16 equals 0.5625 or 56.25%) */
+  flex: 1;
+  margin-right: 10px;
+}
+.vid3-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adjust the object-fit property as needed */
+}
+.vid3 video {
+  border-radius: 20px;
+}
+.vid video {
+  border-radius: 20px;
+}
+
+.img-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-container img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.img-wrapper {
+  position: relative;
+  /* Maintain a 16:9 aspect ratio (9 divided by 16 equals 0.5625 or 56.25%) */
+  flex: 1;
+  margin-right: 10px;
+}
+.img-wrapper:last-child {
+  margin-right: 0;
+}
+
+/* vid component css end */
+/* Services Section End */
+
+/* Review Section Start */
+.reviews .reviews-slider {
+  padding-bottom: 3rem !important;
+}
+.reviews .reviews-slider .box {
+  padding: 2rem !important;
+  text-align: center !important;
+  opacity: 1 !important;
+  margin: 2rem 0 !important;
+  transform: scale(0.8) !important;
+}
+.reviews .reviews-slider .box img {
+  height: 14rem;
+  width: 14rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.reviews .reviews-slider .box .content p {
+  font-size: 2.4rem;
+  color: var(--light-colour);
+  padding: 1rem 0;
+}
+.reviews .reviews-slider .box .content h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+}
+.reviews .reviews-slider .box .content .stars i {
+  font-size: 1.7rem;
+  color: var(--yellow);
+}
+/* Review Section End */
+
+/* Newsletter Start */
+.newsletter {
+  /* background: url(./NewsLetterImgCar.jpg) no-repeat; */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.newsletter h3 {
+  color: #fff;
+  font-size: 3rem;
+}
+.newsletter p {
+  font-size: 1.5rem;
+  color: #ccc;
+  padding: 1rem 0;
+}
+.newsletter form {
+  height: 5rem;
+  max-width: 60rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: var(--box_shadow);
+  display: flex;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+.newsletter form input[type="email"] {
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  text-transform: none;
+}
+.newsletter form input[type="submit"] {
+  font-size: 1.7rem;
+  height: 100%;
+  width: 17rem;
+  background: var(--main);
+  cursor: pointer;
+}
+/* Newsletter End */
+
+/* Footer Start */
+.footer {
+  background: var(--light-yellow);
+  position: relative;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.2rem;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+  color: var(--light-colour);
+  font-size: 1.4rem;
+  display: block;
+  padding: 1rem 0;
+}
+/* .footer .box-container .box li{
+  color: var(--light-colour);
+  font-size: 1.4rem;
+  display: block;
+  padding: 1rem 0;
+} */
+
+.footer .box-container .box a i {
+  padding-right: 0.5rem;
+  color: var(--black);
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+.footer .box-container .box a:hover {
+  padding-left: 2rem !important;
+}
+.strip {
+  background: var(--black);
+  width: 100%;
+  position: absolute;
+}
+.strip h3 {
+  color: #eee;
+  justify-content: center;
+  padding: 1.5rem;
+  text-decoration-line: underline;
+}
+/*Footer End*/
+
+/* vehicles start */
+
+.vehicles row {
+  margin-top: 20%;
+}
+.vehicles img {
+  margin: auto;
+  padding: 3% 3% 0% 3%;
+  justify-content: center;
+  text-align: center;
+}
+.vehicles .Container {
+  margin: 10%;
+}
+
+.vehicles .car-detail-tech {
+  font-weight: lighter;
+  opacity: 50%;
+}
+.form-range track-width {
+  width: 50%;
+}
+.form-range {
+  width: 50% !important;
+  height: 1rem !;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 rgba(255, 145, 0, 0.1);
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+.form-range::-webkit-slider-thumb {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ff7c01 !important;
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.form-range::-webkit-slider-thumb:focus {
+  box-shadow: 0 0 0 1px #ffea00, inset 0 0 0 1px #000;
+  width: 1px;
+}
+
+.form-range::-webkit-slider-thumb:active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.vehicles .checkSort h3 {
+  text-align: left !important;
+}
+/* vehicles end */
+
+/* featured start */
+.freatured_flex_img {
+  border-radius: 50px;
+}
+/* featured end */
+
+/* admin dashbord start */
+.sort-btn {
+  display: flex;
+
+  justify-content: space-between !important;
+}
+.sort-btn .DropdownButton {
+  color: yellow !important;
+}
+/* admin dashbord end */
