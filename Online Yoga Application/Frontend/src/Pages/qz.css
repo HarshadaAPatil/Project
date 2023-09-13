@@ -1,0 +1,14 @@
+.selected-answer
+{
+    background: red;
+}
+.quize-container{
+    font-family: monospace;
+    background: linear-gradient(0deg,#150080,0,03%,#d08642);
+    color: #d08642 ;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100vh;
+}
